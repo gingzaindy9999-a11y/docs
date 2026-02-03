@@ -1,5 +1,7 @@
 # GitHub Docs <!-- omit in toc -->
-
+<Creator> (ฤทธิไกร กิริกัน)
+## gingzaindy9999@gmail.com 
+📞 +66944486574 กิ่ง
 Welcome to GitHub Docs! GitHub’s documentation is open source, meaning anyone from inside or outside the company can contribute. For full contributing guidelines, visit our [contributing guide](https://docs.github.com/en/contributing)
 
 ## Quick links by contributor type
