@@ -11,12 +11,9 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
-type: overview
-topics:
-  - Code Security
-  - Code scanning
-  - CodeQL
 contentType: concepts
+category:
+  - Find and fix code vulnerabilities
 ---
 
 {% data reusables.code-scanning.enterprise-enable-code-scanning %}

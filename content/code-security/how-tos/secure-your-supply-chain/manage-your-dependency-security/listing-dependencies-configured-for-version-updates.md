@@ -12,14 +12,10 @@ versions:
   fpt: '*'
   ghec: '*'
   ghes: '*'
-type: how_to
-topics:
-  - Repositories
-  - Dependabot
-  - Version updates
-  - Dependencies
 shortTitle: List configured dependencies
 contentType: how-tos
+category:
+  - Secure your dependencies
 ---
 
 {% data reusables.dependabot.enterprise-enable-dependabot %}

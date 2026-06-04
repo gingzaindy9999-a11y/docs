@@ -7,14 +7,9 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
-topics:
-  - Repositories
-  - Dependencies
-  - Vulnerabilities
 children:
   - /github-security-features
   - /quickstart-for-securing-your-repository
-  - /quickstart-for-securing-your-organization
-  - /understanding-github-secret-types
+contentType: get-started
 ---
 

@@ -15,11 +15,9 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
-type: overview
-topics:
-  - Code Security
-  - Code scanning
 contentType: concepts
+category:
+  - Find and fix code vulnerabilities
 ---
 
 {% data reusables.code-scanning.enterprise-enable-code-scanning %}
@@ -37,19 +35,17 @@ If {% data variables.product.prodname_code_scanning %} finds a potential vulnera
 {% endif %}
 
 To monitor results from {% data variables.product.prodname_code_scanning %} across your repositories or your organization, you can use webhooks and the {% data variables.product.prodname_code_scanning %} API. For information about the webhooks for {% data variables.product.prodname_code_scanning %}, see
-[AUTOTITLE](/webhooks-and-events/webhooks/webhook-events-and-payloads#code_scanning_alert). For information about API endpoints, see [AUTOTITLE](/rest/code-scanning).
-
-To get started with {% data variables.product.prodname_code_scanning %}, see [AUTOTITLE](/code-security/code-scanning/enabling-code-scanning/configuring-default-setup-for-code-scanning).
+[AUTOTITLE](/webhooks-and-events/webhooks/webhook-events-and-payloads#code_scanning_alert). For information about API endpoints, see [AUTOTITLE](/rest/code-scanning/code-scanning).
 
 {% ifversion fpt or ghec %}
 
-## About billing for {% data variables.product.prodname_code_scanning %}
+{% data variables.product.prodname_code_scanning_caps %} uses {% data variables.product.prodname_actions %}, with each workflow run consuming {% data variables.product.prodname_actions %} minutes. If you want to use {% data variables.product.prodname_code_scanning %} on private repositories, you need a {% data variables.product.prodname_GH_code_security %} license. For more information, see [AUTOTITLE](/billing/managing-billing-for-github-actions/about-billing-for-github-actions). {% data reusables.advanced-security.ghas-trial %}
 
-{% data variables.product.prodname_code_scanning_caps %} uses {% data variables.product.prodname_actions %}, and each run of a {% data variables.product.prodname_code_scanning %} workflow consumes minutes for {% data variables.product.prodname_actions %}. For more information, see [AUTOTITLE](/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-
-To use {% data variables.product.prodname_code_scanning %} on a private repository, you will also need a license for {% data variables.product.prodname_GH_code_security %}. {% data reusables.advanced-security.ghas-trial %}
+If you want to assess your organization's exposure to vulnerabilities before purchasing a license, you can run a free {% data variables.product.prodname_code_security_risk_assessment %}. See [AUTOTITLE](/code-security/concepts/code-scanning/code-security-risk-assessment).
 
 {% endif %}
+
+To get started with {% data variables.product.prodname_code_scanning %}, see [AUTOTITLE](/code-security/code-scanning/enabling-code-scanning/configuring-default-setup-for-code-scanning).
 
 ## About tools for {% data variables.product.prodname_code_scanning %}
 

@@ -14,16 +14,9 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
-type: how_to
-topics:
-  - Code Security
-  - Code scanning
-  - CodeQL
-  - Actions
-  - Repositories
-  - Containers
-  - Java
 contentType: tutorials
+category:
+  - Customize vulnerability detection with CodeQL
 ---
 
 ## About {% data variables.product.prodname_code_scanning %} with a containerized build

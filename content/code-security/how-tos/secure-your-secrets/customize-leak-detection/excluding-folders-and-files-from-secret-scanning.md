@@ -8,19 +8,11 @@ versions:
   ghes: '*'
   ghec: '*'
 contentType: how-tos
-topics:
-  - Secret scanning
-  - Secret Protection
-  - Repositories
 redirect_from:
   - /code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/excluding-folders-and-files-from-secret-scanning
+category:
+  - Protect your secrets
 ---
-
-## About {% data variables.product.prodname_secret_scanning %}
-
-{% data variables.product.prodname_secret_scanning_caps %} automatically detects tokens or credentials that have been checked into a repository. You can view {% ifversion fpt or ghec %}{% data variables.secret-scanning.user_alerts %}{% else %}alerts{% endif %} for any secrets that {% data variables.product.company_short %} finds in your code, in the **Security** tab of the repository, so that you know which tokens or credentials to treat as compromised.{% data reusables.secret-scanning.alert-type-links %}
-
-## About excluding directories from {% data variables.secret-scanning.user_alerts %}
 
 You may have a reason to commit a secret to a repository, such as when you want to provide a fake secret in documentation, or in an example application. In these scenarios, you can quickly dismiss the alert and document the reasons. However, there may be cases where you want to ignore a directory entirely to avoid creating false positive alerts at scale. For example, you might have a monolithic application with several integrations containing a file of dummy keys that could set off numerous false alerts to triage.
 

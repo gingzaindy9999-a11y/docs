@@ -7,30 +7,15 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
-type: how_to
-topics:
-  - Dependabot
-  - Security updates
-  - Alerts
-  - Dependencies
-  - Pull requests
-  - Repositories
 redirect_from:
   - /code-security/dependabot/dependabot-alerts/configuring-dependabot-alerts
+  - /code-security/dependabot/dependabot-alerts
 contentType: how-tos
+category:
+  - Secure your dependencies
 ---
 
-## About {% data variables.product.prodname_dependabot_alerts %} for vulnerable dependencies
-
-{% data reusables.repositories.a-vulnerability-is %}
-
-{% data variables.product.prodname_dependabot %} scans code when a new advisory is added to the {% data variables.product.prodname_advisory_database %} or the dependency graph for a repository changes. When vulnerable dependencies are detected, {% data variables.product.prodname_dependabot_alerts %} are generated. For more information, see [AUTOTITLE](/code-security/dependabot/dependabot-alerts/about-dependabot-alerts).
-
-{% data reusables.dependabot.dependabot-alert-create-PR %}
-
-{% ifversion ghes %}
-> [!NOTE]
-> An enterprise owner must first set up {% data variables.product.prodname_dependabot %} for your enterprise before you can configure {% data variables.product.prodname_dependabot_alerts %}. For more information, see [AUTOTITLE](/admin/configuration/configuring-github-connect/enabling-dependabot-for-your-enterprise).{% endif %}
+When {% data variables.product.prodname_dependabot %} detects vulnerable dependencies in a repository, it generates alerts. For more information, see [AUTOTITLE](/code-security/dependabot/dependabot-alerts/about-dependabot-alerts).
 
 You can enable or disable {% data variables.product.prodname_dependabot_alerts %} for:
 * Your personal account
@@ -38,7 +23,10 @@ You can enable or disable {% data variables.product.prodname_dependabot_alerts %
 * Your organization{% ifversion dependabot-alerts-enterprise-enablement or ghes %}
 * Your enterprise{% endif %}
 
-{% data reusables.dependabot.dependabot-alert-rules %}
+{% ifversion ghes %}
+> [!NOTE]
+> An enterprise owner must first set up {% data variables.product.prodname_dependabot %} for your enterprise before you can configure {% data variables.product.prodname_dependabot_alerts %}. For more information, see [AUTOTITLE](/admin/configuration/configuring-github-connect/enabling-dependabot-for-your-enterprise).
+{% endif %}
 
 ## Managing {% data variables.product.prodname_dependabot_alerts %} for your personal account
 
@@ -85,26 +73,7 @@ An enterprise owner must first set up {% data variables.product.prodname_dependa
 
 ## Managing {% data variables.product.prodname_dependabot_alerts %} for your organization
 
-{% ifversion security-configurations %} You can enable {% data variables.product.prodname_dependabot_alerts %} for all eligible repositories in your organization. For more information, see [AUTOTITLE](/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale).
-
-{% else %}
-
-You can enable or disable {% data variables.product.prodname_dependabot_alerts %} for some or all repositories owned by your organization. {% data reusables.security.note-securing-your-org %}
-
-### Enabling or disabling {% data variables.product.prodname_dependabot_alerts %} for all existing repositories
-
-You can use security overview to find a set of repositories and enable or disable {% data variables.product.prodname_dependabot_alerts %} for them all at the same time. For more information, see [AUTOTITLE](/code-security/security-overview/enabling-security-features-for-multiple-repositories).
-
-You can also use the organization settings page for "{% data variables.product.UI_advanced_security %}" to enable or disable {% data variables.product.prodname_dependabot_alerts %} for all existing repositories in an organization.
-
-{% data reusables.profile.access_org %}
-{% data reusables.profile.org_settings %}
-{% data reusables.organizations.security-and-analysis %}
-1. Under "{% data variables.product.UI_advanced_security %}", to the right of {% data variables.product.prodname_dependabot_alerts %}, click **Disable all** or **Enable all**.
-1. Optionally, to enable {% data variables.product.prodname_dependabot_alerts %} by default for new repositories in your organization, in the dialog box, select "Enable by default for new repositories".
-1. Click **Disable {% data variables.product.prodname_dependabot_alerts %}** or **Enable {% data variables.product.prodname_dependabot_alerts %}** to disable or enable {% data variables.product.prodname_dependabot_alerts %} for all the repositories in your organization.
-
-{% endif %}
+You can enable {% data variables.product.prodname_dependabot_alerts %} for all eligible repositories in your organization. For more information, see [AUTOTITLE](/code-security/securing-your-organization/introduction-to-securing-your-organization-at-scale/about-enabling-security-features-at-scale).
 
 {% ifversion ghec or ghes %}
 
@@ -112,10 +81,7 @@ You can also use the organization settings page for "{% data variables.product.U
 
 {% ifversion security-configuration-enterprise-level %}
 
-{% data variables.product.prodname_security_configurations_caps %}, which are collections of security settings,  allow you to manage {% data variables.product.prodname_dependabot_alerts %} for your enterprise. {% ifversion ghec %}You can:
-
-* Use the {% data variables.product.prodname_github_security_configuration %}. This configuration is maintained by {% data variables.product.github %} and is a set of industry best practices and features that provide a robust, baseline security posture for enterprises. See [AUTOTITLE](/admin/managing-code-security/securing-your-enterprise/applying-the-github-recommended-security-configuration-to-your-enterprise).
-* Configure your own {% data variables.product.prodname_custom_security_configuration %} if you prefer the enablement settings to meet the specific security needs of your enterprise. {% endif %}See [AUTOTITLE](/admin/managing-code-security/securing-your-enterprise/creating-a-custom-security-configuration-for-your-enterprise).
+{% data variables.product.prodname_security_configurations_caps %}, which are collections of security settings, allow you to manage {% data variables.product.prodname_dependabot_alerts %} for your enterprise. You can configure your own {% data variables.product.prodname_custom_security_configuration %} to have the enablement settings to meet the specific security needs of your enterprise. See [AUTOTITLE](/admin/managing-code-security/securing-your-enterprise/creating-a-custom-security-configuration-for-your-enterprise).
 
 {% else %}
 
@@ -129,3 +95,7 @@ You can enable or disable {% data variables.product.prodname_dependabot_alerts %
 {% endif %}
 
 {% endif %}
+
+## Managing {% data variables.product.prodname_dependabot_alerts %} at scale with rules
+
+{% data reusables.dependabot.dependabot-alert-rules %}

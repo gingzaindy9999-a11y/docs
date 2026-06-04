@@ -7,15 +7,11 @@ versions:
   ghes: '*'
   ghec: '*'
 contentType: tutorials
-topics:
-  - Dependabot
-  - Alerts
-  - Vulnerabilities
-  - Repositories
-  - Dependencies
 shortTitle: Dependabot quickstart
 redirect_from:
   - /code-security/getting-started/dependabot-quickstart-guide
+category:
+  - Secure your dependencies
 ---
 
 ## About {% data variables.product.prodname_dependabot %}
@@ -34,7 +30,7 @@ For the purpose of this guide, we're going to use a demo repository to illustrat
 
 You need to start by forking the demo repository.
 
-1. Navigate to [https://github.com/dependabot/demo](https://github.com/dependabot/demo).
+1. Navigate to [https://github.com/dependabot/demo](https://github.com/dependabot/demo?ref_product=supply-chain-security&ref_type=engagement&ref_style=text).
 1. At the top of the page, on the right, click **{% octicon "repo-forked" aria-hidden="true" aria-label="repo-forked" %} Fork**.
 1. Select an owner (you can select your {% data variables.product.prodname_dotcom %} personal account) and type a repository name. For more information about forking repositories, see [AUTOTITLE](/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
 1. Click **Create fork**.
@@ -57,7 +53,7 @@ For more information about configuring each of these {% data variables.product.p
 
 ## Viewing {% data variables.product.prodname_dependabot_alerts %} for your repository
 
-If {% data variables.product.prodname_dependabot_alerts %} are enabled for a repository, you can view {% data variables.product.prodname_dependabot_alerts %} on the "Security" tab for the repository. You can use the forked repository that you enabled {% data variables.product.prodname_dependabot_alerts %} on in the previous section.
+If {% data variables.product.prodname_dependabot_alerts %} are enabled for a repository, you can view {% data variables.product.prodname_dependabot_alerts %} on the **{% data variables.product.prodname_security_and_quality_tab %}** tab for the repository. You can use the forked repository that you enabled {% data variables.product.prodname_dependabot_alerts %} on in the previous section.
 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.sidebar-security %}
@@ -96,7 +92,7 @@ For more information about viewing, prioritizing, and sorting {% data variables.
 
 You can fix or dismiss {% data variables.product.prodname_dependabot_alerts %} on {% data variables.product.prodname_dotcom %}. Let's continue to use the forked repository as an example, and the "Command Injection in lodash" alert described in the previous section.
 
-1. Navigate to the {% data variables.product.prodname_dependabot_alerts %} tab for the repository. For more information, see the [Viewing {% data variables.product.prodname_dependabot_alerts %} for your repository](#viewing-dependabot-alerts-for-your-repository) section above.
+1. Navigate to the {% data variables.product.prodname_dependabot %} tab for the repository. For more information, see the [Viewing {% data variables.product.prodname_dependabot_alerts %} for your repository](#viewing-dependabot-alerts-for-your-repository) section above.
 1. Click an alert.
 1. Click the "Command Injection in lodash" alert on the `javascript/package-lock.json` file.
 1. Review the alert. You can:
